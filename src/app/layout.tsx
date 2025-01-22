@@ -3,6 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Shop",
+  description: "Loja virtual",
 };
 
 export default function RootLayout({
