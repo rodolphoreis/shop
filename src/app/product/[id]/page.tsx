@@ -1,8 +1,10 @@
 import React from "react";
 
-type ParamsType = {
-  params: { id: string };
-};
+interface ParamsType {
+  params: {
+    id: string;
+  };
+}
 
 const Page = ({ params }: ParamsType) => {
   return (
