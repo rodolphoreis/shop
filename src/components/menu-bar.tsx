@@ -19,93 +19,148 @@ import {
 
 const MenuBar = () => {
   return (
-    <Menubar className="bg-zinc-100 text-zinc-500 mx-auto text-xs sm:text-base border-none shadow-none flex  sm:gap-24 ">
-      <MenubarMenu>
-        <MenubarTrigger>COLEÇÕES</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>
-            New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            New Window <MenubarShortcut>⌘N</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem disabled>New Incognito Window</MenubarItem>
-          <MenubarSeparator />
-          <MenubarSub>
-            <MenubarSubTrigger className="text-xs">CAMISETAS</MenubarSubTrigger>
-            <MenubarSubContent>
-              <MenubarItem>Email link</MenubarItem>
-              <MenubarItem>Messages</MenubarItem>
-              <MenubarItem>Notes</MenubarItem>
-            </MenubarSubContent>
-          </MenubarSub>
-          <MenubarSeparator />
-          <MenubarItem>
-            Print... <MenubarShortcut>⌘P</MenubarShortcut>
-          </MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger>MOLETON</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>
-            Undo <MenubarShortcut>⌘Z</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
-          </MenubarItem>
-          <MenubarSeparator />
-          <MenubarSub>
-            <MenubarSubTrigger>PARCEIROS</MenubarSubTrigger>
-            <MenubarSubContent>
-              <MenubarItem>Search the web</MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem>Find...</MenubarItem>
-              <MenubarItem>Find Next</MenubarItem>
-              <MenubarItem>Find Previous</MenubarItem>
-            </MenubarSubContent>
-          </MenubarSub>
-          <MenubarSeparator />
-          <MenubarItem>Cut</MenubarItem>
-          <MenubarItem>Copy</MenubarItem>
-          <MenubarItem>Paste</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger>ACESSÓRIOS</MenubarTrigger>
-        <MenubarContent>
-          <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
-          <MenubarCheckboxItem checked>
-            Always Show Full URLs
-          </MenubarCheckboxItem>
-          <MenubarSeparator />
-          <MenubarItem inset>
-            Reload <MenubarShortcut>⌘R</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem disabled inset>
-            Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
-          </MenubarItem>
-          <MenubarSeparator />
-          <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-          <MenubarSeparator />
-          <MenubarItem inset>Hide Sidebar</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger>ARTISTAS</MenubarTrigger>
-        <MenubarContent>
-          <MenubarRadioGroup value="benoit">
-            <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-            <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-            <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-          </MenubarRadioGroup>
-          <MenubarSeparator />
-          <MenubarItem inset>Edit...</MenubarItem>
-          <MenubarSeparator />
-          <MenubarItem inset>Add Profile...</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-    </Menubar>
+    <div className="w-full h-10 bg-zinc-100 flex mx-auto items-center justify-center">
+      <Menubar className="flex justify-center bg-zinc-100 text-zinc-500 mx-auto text-xs sm:text-sm border-none shadow-none w-full max-w-screen-lg md:gap-24 items-center overflow-hidden">
+        <MenubarMenu>
+          <MenubarTrigger className="truncate px-2">COLEÇÕES</MenubarTrigger>
+          <MenubarContent>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem>
+              New Window <MenubarShortcut>⌘N</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              New Incognito Window
+            </MenubarItem>
+            <MenubarSeparator />
+            <MenubarSub>
+              <MenubarSubTrigger className="truncate px-2">
+                CAMISETAS
+              </MenubarSubTrigger>
+              <MenubarSubContent>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Email link
+                </MenubarItem>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Messages
+                </MenubarItem>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Notes
+                </MenubarItem>
+              </MenubarSubContent>
+            </MenubarSub>
+            <MenubarSeparator />
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Print... <MenubarShortcut>⌘P</MenubarShortcut>
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="truncate px-2">MOLETON</MenubarTrigger>
+          <MenubarContent>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+            </MenubarItem>
+            <MenubarSeparator />
+            <MenubarSub>
+              <MenubarSubTrigger className="truncate px-2">
+                PARCEIROS
+              </MenubarSubTrigger>
+              <MenubarSubContent>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Search the web
+                </MenubarItem>
+                <MenubarSeparator />
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Find...
+                </MenubarItem>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Find Next
+                </MenubarItem>
+                <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+                  Find Previous
+                </MenubarItem>
+              </MenubarSubContent>
+            </MenubarSub>
+            <MenubarSeparator />
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Cut
+            </MenubarItem>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Copy
+            </MenubarItem>
+            <MenubarItem className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate">
+              Paste
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="truncate px-2">ACESSÓRIOS</MenubarTrigger>
+          <MenubarContent>
+            <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
+            <MenubarCheckboxItem checked>
+              Always Show Full URLs
+            </MenubarCheckboxItem>
+            <MenubarSeparator />
+            <MenubarItem
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Reload <MenubarShortcut>⌘R</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem
+              disabled
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+            </MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Toggle Fullscreen
+            </MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Hide Sidebar
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="truncate px-2">ARTISTAS</MenubarTrigger>
+          <MenubarContent>
+            <MenubarRadioGroup value="benoit">
+              <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+              <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+              <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+            </MenubarRadioGroup>
+            <MenubarSeparator />
+            <MenubarItem
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Edit...
+            </MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem
+              inset
+              className="w-full sm:w-auto px-2 py-1 text-xs md:text-sm truncate"
+            >
+              Add Profile...
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+      </Menubar>
+    </div>
   );
 };
 
