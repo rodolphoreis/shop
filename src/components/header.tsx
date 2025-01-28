@@ -27,7 +27,7 @@ const Header = () => {
           <Filter />
         </div>
       </div>
-      <div className="w-full  h-9 bg-zinc-100 flex mx-auto items-center justify-center">
+      <div className="w-full  h-10 bg-zinc-100 flex mx-auto items-center justify-center">
         <MenuBar />
       </div>
     </div>
