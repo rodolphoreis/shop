@@ -23,7 +23,7 @@ const arrayImage = [
 ];
 const CardProduct = () => {
   return (
-    <div className="flex w-full items-center justify-center min-h-screen mt-[-250px] sm:mt-0 ">
+    <div className="flex w-full items-center justify-center min-h-screen  sm:mt-0 ">
       <div className="grid grid-cols-1 gap-5 md:gap-10  mt-5 sm:grid-cols-2 lg:grid-cols-5 justify-center mx-auto w-[90%] px-4 ">
         {arrayImage.map((imgURL, index) => (
           <Card
