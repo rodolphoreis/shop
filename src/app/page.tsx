@@ -5,6 +5,7 @@ import produtos from "@/data/products";
 import Image from "next/image";
 import React from "react";
 import MenuBar from "@/components/menu-bar";
+import Header from "@/components/header";
 
 const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState(produtos);
@@ -28,8 +29,20 @@ const Home = () => {
     }
   }
 
+  function handleSearch(searchTerm: string) {
+    if (searchTerm) {
+      const filtered = produtos.filter((produto) =>
+        produto.produto.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(produtos);
+    }
+  }
+
   return (
     <>
+      <Header onFilter={handleSearch} />
       <div className="w-full mt-7 h-10 bg-zinc-100 flex mx-auto items-center justify-center px-1">
         <MenuBar onFilter={handleFilter} />
       </div>
