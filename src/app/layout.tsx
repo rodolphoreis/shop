@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/header";
 
 export const metadata: Metadata = {
-  title: "Shop",
+  title: "PrimeShop",
   description: "Loja virtual",
 };
 
@@ -14,10 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`antialiased`}>
-        <Header />
-        {children}
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }
