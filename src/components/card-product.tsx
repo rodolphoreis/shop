@@ -3,11 +3,11 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
-import produtos from "@/data/products";
+import { ProductsInterface } from "@/data/products";
 
-const CardProduct = () => {
+const CardProduct = ({ produtos }: { produtos: ProductsInterface[] }) => {
   return (
-    <div className="flex w-full items-center justify-center min-h-screen  sm:mt-0 ">
+    <div className="flex w-full justify-center  sm:mt-0 py-10">
       <div className="grid grid-cols-2 gap-5 md:gap-10  mt-5 sm:grid-cols-2 lg:grid-cols-5 justify-center mx-auto w-[90%] px-4 ">
         {produtos.map((produto) => (
           <Card
