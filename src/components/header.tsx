@@ -1,7 +1,6 @@
 import { ShoppingBag } from "lucide-react";
 import React from "react";
 import Filter from "./filter";
-import MenuBar from "./menu-bar";
 
 const Header = () => {
   return (
@@ -16,19 +15,16 @@ const Header = () => {
           <div className="flex gap-2">
             <ShoppingBag className="text-zinc-500 " size={25} />
             <div className="flex gap-0">
-              <span className=" font-extrabold text-zinc-500 text-xl sm:text-2xl">
+              <span className="font-extrabold text-zinc-500 text-xl sm:text-2xl">
                 Prime
               </span>
-              <span className=" font-extrabold text-orange-500 text-xl sm:text-2xl">
+              <span className="font-extrabold text-orange-500 text-xl sm:text-2xl">
                 Shop
               </span>
             </div>
           </div>
           <Filter />
         </div>
-      </div>
-      <div className="w-full  h-10 bg-zinc-100 flex mx-auto items-center justify-center px-1">
-        <MenuBar />
       </div>
     </div>
   );
