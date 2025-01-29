@@ -1,4 +1,4 @@
-interface ProductsInterface {
+export interface ProductsInterface {
   id: number;
   produto: string;
   preco: number;
@@ -64,7 +64,7 @@ const produtos: ProductsInterface[] = [
     preco: 129.9,
     imageUrl: arrayImage[9],
   },
-  { id: 11, produto: "Murrinho", preco: 69.9, imageUrl: arrayImage[10] },
+  { id: 11, produto: "Chaveiro", preco: 69.9, imageUrl: arrayImage[10] },
   {
     id: 12,
     produto: "Camiseta",
