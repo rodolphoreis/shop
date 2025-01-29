@@ -2,7 +2,7 @@ import { ShoppingBag } from "lucide-react";
 import React from "react";
 import Filter from "./filter";
 
-const Header = () => {
+const Header = ({ onFilter }: { onFilter: (searchTerm: string) => void }) => {
   return (
     <div className="w-full h-20">
       <div className="w-full h-6 bg-orange-500 items-center justify-center flex">
@@ -23,7 +23,7 @@ const Header = () => {
               </span>
             </div>
           </div>
-          <Filter />
+          <Filter onFilter={onFilter} />
         </div>
       </div>
     </div>
