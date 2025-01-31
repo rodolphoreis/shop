@@ -109,15 +109,15 @@ const produtos: ProductsInterface[] = [
   },
   {
     id: 9,
-    produto: "Camisa",
+    produto: "Boné",
     preco: 69.9,
     valorAnterior: 139.8,
     valorComDesconto: 69.9 / 2,
     imageUrl:
       "https://cdn.vnda.com.br/780x/lolja/2024/12/05/11_10_23_288_11_12_6_696_1.jpg?v=1733407828",
-    descricao: "Camisa casual masculina, perfeita para um look do dia.",
+    descricao: "Boné preto, estiloso e confortável.",
     tamanhos: ["P", "M", "G"],
-    cores: ["Azul", "Branco"],
+    cores: ["Preto"],
   },
   {
     id: 10,

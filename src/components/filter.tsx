@@ -17,7 +17,7 @@ const Filter = ({ onFilter }: { onFilter: (searchTerm: string) => void }) => {
       <Input
         type="text"
         placeholder="Busque por produtos.."
-        className="flex-1 text-sm border-none shadow-none "
+        className=" flex-1 text-xs border-none shadow-none px-1"
         value={searchTerm}
         onChange={handleFilter}
       />
