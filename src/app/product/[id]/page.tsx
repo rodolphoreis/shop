@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 
 const ProductId = () => {
   const params = useParams();
-  const id = params.id;
+  const id = params?.id;
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
@@ -30,7 +30,6 @@ const ProductId = () => {
   if (!productSelect) {
     return <h1>Produto não encontrado!</h1>;
   }
-
   return (
     <>
       <HeaderProduct />
