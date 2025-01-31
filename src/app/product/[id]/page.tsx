@@ -13,14 +13,16 @@ interface Params {
 }
 
 interface PageProps {
-  params: Params;
+  params: Promise<Params>;
 }
 
 const ProductId = ({ params }: PageProps) => {
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
-    setProductId(Number(params.id));
+    params.then((resolvedParams) => {
+      setProductId(Number(resolvedParams.id));
+    });
   }, [params]);
 
   if (productId === null) {
@@ -32,6 +34,7 @@ const ProductId = ({ params }: PageProps) => {
   if (!productSelect) {
     return <h1>Produto não encontrado!</h1>;
   }
+
   return (
     <>
       <HeaderProduct />
