@@ -8,13 +8,19 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const ProductId = ({ params }: { params: Promise<{ id: number }> }) => {
+interface Params {
+  id: string;
+}
+
+interface PageProps {
+  params: Params;
+}
+
+const ProductId = ({ params }: PageProps) => {
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
-    params.then(({ id }) => {
-      setProductId(Number(id));
-    });
+    setProductId(Number(params.id));
   }, [params]);
 
   if (productId === null) {
@@ -26,7 +32,6 @@ const ProductId = ({ params }: { params: Promise<{ id: number }> }) => {
   if (!productSelect) {
     return <h1>Produto não encontrado!</h1>;
   }
-
   return (
     <>
       <HeaderProduct />
