@@ -7,22 +7,19 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
 interface Params {
   id: string;
 }
 
 interface PageProps {
-  params: Promise<Params>;
+  params: Params;
 }
 
 const ProductId = ({ params }: PageProps) => {
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
-    params.then((resolvedParams) => {
-      setProductId(Number(resolvedParams.id));
-    });
+    setProductId(Number(params.id));
   }, [params]);
 
   if (productId === null) {
@@ -34,7 +31,6 @@ const ProductId = ({ params }: PageProps) => {
   if (!productSelect) {
     return <h1>Produto não encontrado!</h1>;
   }
-
   return (
     <>
       <HeaderProduct />
