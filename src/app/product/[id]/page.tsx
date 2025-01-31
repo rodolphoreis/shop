@@ -6,15 +6,20 @@ import produtos from "@/data/products";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-interface IdInterface {
-  params: { id: string };
-}
+const ProductId = ({ params }: { params: Promise<{ id: number }> }) => {
+  const [productId, setProductId] = useState<number | null>(null);
 
-const ProductId = ({ params }: IdInterface) => {
-  const id = params.id;
-  const productId = Number(id);
+  useEffect(() => {
+    params.then(({ id }) => {
+      setProductId(Number(id));
+    });
+  }, [params]);
+
+  if (productId === null) {
+    return <h1>Carregando...</h1>;
+  }
 
   const productSelect = produtos.find((produto) => produto.id === productId);
 
@@ -45,7 +50,7 @@ const ProductId = ({ params }: IdInterface) => {
 
             <div className="mt-6">
               <p className="text-lg font-medium text-red-500 line-through">
-                € {productSelect.valorAnterior}
+                € {productSelect.preco}
               </p>
               <p className="text-2xl md:text-5xl font-bold text-gray-800 mt-1">
                 € {productSelect.valorComDesconto}
