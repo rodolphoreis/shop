@@ -6,21 +6,19 @@ import produtos from "@/data/products";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+
 import React, { useEffect, useState } from "react";
-interface Params {
-  id: string;
-}
-
-interface PageProps {
-  params: Params;
-}
-
-const ProductId = ({ params }: PageProps) => {
+const ProductId = () => {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
-    setProductId(Number(params.id));
-  }, [params]);
+    if (id) {
+      setProductId(Number(id));
+    }
+  }, [id]);
 
   if (productId === null) {
     return <h1>Carregando...</h1>;
@@ -31,6 +29,7 @@ const ProductId = ({ params }: PageProps) => {
   if (!productSelect) {
     return <h1>Produto não encontrado!</h1>;
   }
+
   return (
     <>
       <HeaderProduct />
