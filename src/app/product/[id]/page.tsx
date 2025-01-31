@@ -6,12 +6,13 @@ import produtos from "@/data/products";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import React, { useEffect, useState } from "react";
+
 const ProductId = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const params = useParams();
+  const id = params.id;
   const [productId, setProductId] = useState<number | null>(null);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const ProductId = () => {
     <>
       <HeaderProduct />
       <div className="max-w-4xl flex flex-col mt-0 md:mt-8 lg:mt-32 mx-auto p-4 space-y-6">
-        <div className="flex flex-col md:flex-row  md:space-x-8">
+        <div className="flex flex-col md:flex-row md:space-x-8">
           <div className="w-full md:w-1/2">
             <Image
               src={productSelect.imageUrl}
@@ -86,7 +87,7 @@ const ProductId = () => {
           </div>
         </div>
 
-        <div className="w-full sm:w-auto flex  gap-2 mt-8 ">
+        <div className="w-full sm:w-auto flex gap-2 mt-8 ">
           <Link
             href="/"
             className={cn(
