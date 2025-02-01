@@ -2,18 +2,6 @@
 
 PrimeShop é um projeto de e-commerce desenvolvido com [Next.js](https://nextjs.org) e [Tailwind CSS](https://tailwindcss.com).
 
-## Índice
-
-- [PrimeShop](#primeshop)
-  - [Índice](#índice)
-  - [Instalação](#instalação)
-  - [Scripts Disponíveis](#scripts-disponíveis)
-  - [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-  - [Contribuição](#contribuição)
-  - [Licença](#licença)
-  - [Imagens](#imagens)
-
 ## Instalação
 
 Para instalar e rodar o projeto localmente, siga os passos abaixo:
