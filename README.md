@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PrimeShop
 
-## Getting Started
+PrimeShop é um projeto de e-commerce desenvolvido com [Next.js](https://nextjs.org) e [Tailwind CSS](https://tailwindcss.com).
 
-First, run the development server:
+## Índice
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [PrimeShop](#primeshop)
+  - [Índice](#índice)
+  - [Instalação](#instalação)
+  - [Scripts Disponíveis](#scripts-disponíveis)
+  - [Estrutura do Projeto](#estrutura-do-projeto)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Contribuição](#contribuição)
+  - [Licença](#licença)
+  - [Imagens](#imagens)
+
+## Instalação
+
+Para instalar e rodar o projeto localmente, siga os passos abaixo:
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/rodolphoreis/shop.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd shop
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode rodar os seguintes scripts:
+
+- `npm run dev`: Inicia o servidor de desenvolvimento.
+- `npm run build`: Compila o projeto para produção.
+- `npm run start`: Inicia o servidor de produção.
+- `npm run lint`: Executa o linter para verificar problemas no código.
+
+## Estrutura do Projeto
+
+A estrutura do projeto é a seguinte:
+
+```
+├── .gitignore
+├── .next/
+├── package.json
+├── postcss.config.mjs
+├── public/
+├── README.md
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── data/
+│   ├── lib/
+├── tailwind.config.ts
+├── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **src/app**: Contém as páginas do Next.js.
+- **src/components**: Contém os componentes reutilizáveis.
+- **src/data**: Contém os dados dos produtos.
+- **src/lib**: Contém utilitários e funções auxiliares.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js](https://nextjs.org)
+- [React](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [Radix UI](https://www.radix-ui.com)
+- [Lucide Icons](https://lucide.dev)
 
-## Learn More
+## Contribuição
 
-To learn more about Next.js, take a look at the following resources:
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Licença
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
